@@ -22,6 +22,6 @@ This project focuses on developing a C++ reverse shell that initially triggers d
 
 # VirusTotal Results
 
-The obfuscated reverse shell has been tested on VirusTotal and achieved a detection rate of 6/72, indicating significant success in bypassing most antivirus engines, including Windows Defender. The goal of future iterations will be to further reduce this detection rate.
+The obfuscated reverse shell has been tested on VirusTotal and achieved a detection rate of `6/73`, indicating significant success in bypassing most antivirus engines, including Windows Defender. The goal of future iterations will be to further reduce this detection rate.
 
 ![VirusTotal_POC](https://github.com/user-attachments/assets/b0a095f6-5ffd-467b-a646-1cf7a47353c4)
