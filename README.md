@@ -17,7 +17,7 @@ This project focuses on developing a C++ reverse shell that initially triggers d
   - Implemented flexible communication parameters, allowing easy modification of the server's IP and port settings without altering the core code.
 
 
-- ** Dynamic De-obfuscation Logic:** 
+- **Dynamic De-obfuscation Logic:** 
   - Developed lightweight, runtime de-obfuscation functions to resolve obfuscated API calls. These functions allow the reverse shell to perform necessary tasks while keeping obfuscation in place until the last possible moment, reducing the chance of detection by behavioral analysis.
 
 # VirusTotal Results
