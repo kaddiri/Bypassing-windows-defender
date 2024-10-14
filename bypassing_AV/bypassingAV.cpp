@@ -97,7 +97,7 @@ int main(int argc, char* argv[]) {
     if (reinterpret_cast<int(WINAPI*)(SOCKET, const struct sockaddr*, int, LPWSABUF, LPWSABUF,
         LPQOS, LPQOS, LPWSAOVERLAPPED, LPWSAOVERLAPPED_COMPLETION_ROUTINE)>(
         Connectsaw)(wSock, reinterpret_cast<const sockaddr*>(&hax), sizeof(hax), nullptr, nullptr, nullptr, nullptr, nullptr, nullptr) == 0) {
-        printf("\n BOOOOOOM \n"); // Connection successful
+        printf("\n Connection successful \n"); // Connection successful
     }
     else {
         printf("Error: 0x%x\n", GetLastError()); // Print error code
